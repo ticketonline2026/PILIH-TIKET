@@ -1,301 +1,315 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Category Tiket Tambahan</title>
 
 <!-- FONT -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <!-- ICON -->
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#f4f6f8;
-color:#111;
-overflow-x:hidden;
+    background:#f4f6f8;
+    color:#111;
+    overflow-x:hidden;
 }
 
 .container{
-max-width:900px;
-margin:auto;
-padding-bottom:140px;
+    max-width:900px;
+    margin:auto;
+    padding-bottom:140px;
+}
+
+/* HEADER */
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 20px;
+    background:#fff;
+}
+
+.logo{
+    font-weight:800;
+    font-size:18px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.logo-icon{
+    color:#00aaff;
+}
+
+.header-right{
+    display:flex;
+    gap:10px;
+}
+
+.header-btn{
+    background:#f1f3f5;
+    padding:8px 12px;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.lang-btn{
+    font-weight:600;
 }
 
 /* BANNER */
 
 .banner img{
-width:100%;
-display:block;
-border-bottom-left-radius:30px;
-border-bottom-right-radius:30px;
+    width:100%;
+    display:block;
+    border-bottom-left-radius:30px;
+    border-bottom-right-radius:30px;
 }
 
 /* TITLE */
 
 .title{
-padding:28px 22px 10px;
+    padding:28px 22px 10px;
 }
 
 .title p{
-font-size:14px;
-font-weight:600;
-color:#00aaff;
-margin-bottom:8px;
+    font-size:14px;
+    font-weight:600;
+    color:#00aaff;
+    margin-bottom:8px;
 }
 
 .title h1{
-font-size:34px;
-font-weight:800;
-line-height:1.2;
+    font-size:34px;
+    font-weight:800;
+    line-height:1.2;
 }
 
 /* CARD */
 
 .ticket-card{
-background:white;
-margin:20px;
-border-radius:28px;
-padding:22px;
-box-shadow:0 10px 30px rgba(0,0,0,.05);
-border:1px solid #ececec;
-position:relative;
-overflow:hidden;
+    background:white;
+    margin:20px;
+    border-radius:28px;
+    padding:22px;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+    border:1px solid #ececec;
+    position:relative;
+    overflow:hidden;
 }
 
 /* BADGE */
 
 .badge{
-position:absolute;
-top:20px;
-right:20px;
-padding:8px 16px;
-border-radius:999px;
-font-size:12px;
-font-weight:700;
+    position:absolute;
+    top:20px;
+    right:20px;
+    padding:8px 16px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:700;
 }
 
 .soldout{
-background:#ffebeb;
-color:#ff2f2f;
+    background:#ffebeb;
+    color:#ff2f2f;
 }
 
 .sale{
-background:#e7fff0;
-color:#00a34d;
-animation:pulse 1.5s infinite;
+    background:#e7fff0;
+    color:#00a34d;
+    animation:pulse 1.5s infinite;
 }
 
 @keyframes pulse{
-
-0%{
-transform:scale(1);
-}
-
-50%{
-transform:scale(1.05);
-}
-
-100%{
-transform:scale(1);
-}
-
+    0%{transform:scale(1);}
+    50%{transform:scale(1.05);}
+    100%{transform:scale(1);}
 }
 
 /* TICKET */
 
 .ticket-head{
-margin-bottom:20px;
+    margin-bottom:20px;
 }
 
 .ticket-head h2{
-font-size:26px;
-font-weight:800;
-margin-bottom:6px;
+    font-size:26px;
+    font-weight:800;
+    margin-bottom:6px;
 }
 
 .ticket-head p{
-color:#666;
-font-size:15px;
+    color:#666;
+    font-size:15px;
 }
 
 .price{
-font-size:28px;
-font-weight:800;
-margin-top:18px;
-color:#00aaff;
+    font-size:28px;
+    font-weight:800;
+    margin-top:18px;
+    color:#00aaff;
 }
 
 /* WARNING */
 
 .warning{
-display:inline-flex;
-align-items:center;
-gap:8px;
-background:#fff6dd;
-color:#c68a00;
-padding:10px 14px;
-border-radius:14px;
-font-size:13px;
-font-weight:600;
-margin-top:18px;
-animation:blink 1.2s infinite;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:#fff6dd;
+    color:#c68a00;
+    padding:10px 14px;
+    border-radius:14px;
+    font-size:13px;
+    font-weight:600;
+    margin-top:18px;
+    animation:blink 1.2s infinite;
 }
 
 @keyframes blink{
-
-0%{
-opacity:1;
-}
-
-50%{
-opacity:.4;
-}
-
-100%{
-opacity:1;
-}
-
+    0%{opacity:1;}
+    50%{opacity:.4;}
+    100%{opacity:1;}
 }
 
 /* QTY */
 
 .qty-box{
-display:flex;
-align-items:center;
-gap:14px;
-margin-top:22px;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-top:22px;
 }
 
 .qty-btn{
-width:42px;
-height:42px;
-border:none;
-border-radius:14px;
-font-size:20px;
-font-weight:700;
-background:#00b7ff;
-color:white;
-cursor:pointer;
-transition:.3s;
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:14px;
+    font-size:20px;
+    font-weight:700;
+    background:#00b7ff;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
 }
 
 .qty-btn:hover{
-transform:scale(1.08);
+    transform:scale(1.08);
 }
 
 .qty-number{
-font-size:20px;
-font-weight:700;
-min-width:30px;
-text-align:center;
+    font-size:20px;
+    font-weight:700;
+    min-width:30px;
+    text-align:center;
 }
 
 /* SOLD */
 
 .disabled{
-opacity:.55;
-pointer-events:none;
+    opacity:.55;
+    pointer-events:none;
 }
 
 /* FLOAT BUTTON */
 
 .buy-button{
-position:fixed;
-bottom:20px;
-left:50%;
-transform:translateX(-50%);
-width:90%;
-max-width:520px;
-background:linear-gradient(135deg,#00c8ff,#008cff);
-color:white;
-border:none;
-padding:18px;
-border-radius:999px;
-font-size:18px;
-font-weight:700;
-cursor:pointer;
-box-shadow:0 12px 25px rgba(0,0,0,.18);
-z-index:9999;
-transition:.3s;
-display:flex;
-align-items:center;
-justify-content:center;
-gap:10px;
+    position:fixed;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+    width:90%;
+    max-width:520px;
+    background:linear-gradient(135deg,#00c8ff,#008cff);
+    color:white;
+    border:none;
+    padding:18px;
+    border-radius:999px;
+    font-size:18px;
+    font-weight:700;
+    cursor:pointer;
+    box-shadow:0 12px 25px rgba(0,0,0,.18);
+    z-index:9999;
+    transition:.3s;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
 }
 
 .buy-button:disabled{
-background:#cfd5da;
-cursor:not-allowed;
-box-shadow:none;
+    background:#cfd5da;
+    cursor:not-allowed;
+    box-shadow:none;
 }
 
 /* LOADING */
 
 .loading{
-display:none;
-align-items:center;
-justify-content:center;
-gap:12px;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
 }
 
 .spinner{
-width:22px;
-height:22px;
-border:3px solid rgba(255,255,255,.4);
-border-top:3px solid white;
-border-radius:50%;
-animation:spin .8s linear infinite;
+    width:22px;
+    height:22px;
+    border:3px solid rgba(255,255,255,.4);
+    border-top:3px solid white;
+    border-radius:50%;
+    animation:spin .8s linear infinite;
 }
 
 @keyframes spin{
-100%{
-transform:rotate(360deg);
-}
+    100%{
+        transform:rotate(360deg);
+    }
 }
 
 footer{
-text-align:center;
-padding:30px;
-font-size:13px;
-color:#777;
+    text-align:center;
+    padding:30px;
+    font-size:13px;
+    color:#777;
 }
 
 @media(max-width:600px){
 
-.title h1{
-font-size:28px;
-}
+    .title h1{
+        font-size:28px;
+    }
 
-.ticket-head h2{
-font-size:22px;
-}
+    .ticket-head h2{
+        font-size:22px;
+    }
 
-.price{
-font-size:24px;
-}
-
+    .price{
+        font-size:24px;
+    }
 }
 
 </style>
 </head>
-<body> 
-  </head>
 
 <body>
 
@@ -312,149 +326,117 @@ font-size:24px;
             <div class="header-btn">⌕</div>
             <div class="header-btn">☰</div>
         </div>
+    </div>
 
-<div class="container"> 
-  
+    <!-- BANNER -->
+    <div class="banner">
+        <img src="banner-poliponi.png" alt="Banner">
+    </div>
 
-<!-- BANNER -->
+    <!-- TITLE -->
+    <div class="title">
+        <p>CATEGORY TIKET TAMBAHAN</p>
+        <h1>POLIPONI 2026 - BALI</h1>
+    </div>
 
-<div class="banner">
-<img src="banner-poliponi.png" alt="Banner">
-</div>
+    <!-- FESTIVAL -->
+    <div class="ticket-card disabled">
 
-<!-- TITLE -->
+        <div class="badge soldout">
+            SOLD OUT
+        </div>
 
-<div class="title">
-<p>CATEGORY TIKET TAMBAHAN</p>
-<h1>POLIPONI 2026 - BALI</h1>
-</div>
+        <div class="ticket-head">
+            <h2>FESTIVAL</h2>
+            <p>FULL BOOKED</p>
 
-<!-- FESTIVAL -->
+            <div class="price">
+                Rp. 325.000
+            </div>
+        </div>
 
-<div class="ticket-card disabled">
+    </div>
 
-<div class="badge soldout">
-SOLD OUT
-</div>
+    <!-- PREMIUM -->
+    <div class="ticket-card">
 
-<div class="ticket-head">
-<h2>FESTIVAL</h2>
-<p>FULL BOOKED</p>
+        <div class="badge sale">
+            ON SALE
+        </div>
 
-<div class="price">
-Rp. 325.000
-</div>
+        <div class="ticket-head">
+            <h2>PREMIUM</h2>
+            <p>20 TIKET TERSISA</p>
 
-</div>
+            <div class="price">
+                Rp. 475.000
+            </div>
 
-</div>
+            <div class="warning">
+                <i class="fa-solid fa-fire"></i>
+                Tiket hampir habis
+            </div>
+        </div>
 
-<!-- PREMIUM -->
+        <div class="qty-box">
+            <button class="qty-btn" onclick="changeQty('premium', -1)">-</button>
 
-<div class="ticket-card">
+            <div class="qty-number" id="premiumQty">0</div>
 
-<div class="badge sale">
-ON SALE
-</div>
+            <button class="qty-btn" onclick="changeQty('premium', 1)">+</button>
+        </div>
 
-<div class="ticket-head">
+    </div>
 
-<h2>PREMIUM</h2>
-<p>20 TIKET TERSISA</p>
+    <!-- FAST TRACK -->
+    <div class="ticket-card">
 
-<div class="price">
-Rp. 475.000
-</div>
+        <div class="badge sale">
+            ON SALE
+        </div>
 
-<div class="warning">
-<i class="fa-solid fa-fire"></i>
-Tiket hampir habis
-</div>
+        <div class="ticket-head">
+            <h2>FAST TRACK</h2>
+            <p>14 TIKET TERSISA</p>
 
-</div>
+            <div class="price">
+                Rp. 650.000
+            </div>
 
-<div class="qty-box">
+            <div class="warning">
+                <i class="fa-solid fa-bolt"></i>
+                Tiket hampir habis
+            </div>
+        </div>
 
-<button class="qty-btn" onclick="changeQty('premium', -1)">
--
-</button>
+        <div class="qty-box">
+            <button class="qty-btn" onclick="changeQty('fast', -1)">-</button>
 
-<div class="qty-number" id="premiumQty">
-0
-</div>
+            <div class="qty-number" id="fastQty">0</div>
 
-<button class="qty-btn" onclick="changeQty('premium', 1)">
-+
-</button>
+            <button class="qty-btn" onclick="changeQty('fast', 1)">+</button>
+        </div>
 
-</div>
+    </div>
 
-</div>
-
-<!-- FAST TRACK -->
-
-<div class="ticket-card">
-
-<div class="badge sale">
-ON SALE
-</div>
-
-<div class="ticket-head">
-
-<h2>FAST TRACK</h2>
-<p>14 TIKET TERSISA</p>
-
-<div class="price">
-Rp. 650.000
-</div>
-
-<div class="warning">
-<i class="fa-solid fa-bolt"></i>
-Tiket hampir habis
-</div>
-
-</div>
-
-<div class="qty-box">
-
-<button class="qty-btn" onclick="changeQty('fast', -1)">
--
-</button>
-
-<div class="qty-number" id="fastQty">
-0
-</div>
-
-<button class="qty-btn" onclick="changeQty('fast', 1)">
-+
-</button>
-
-</div>
-
-</div>
-
-<footer>
-© 2026 POLIPONI BALI
-</footer>
+    <footer>
+        © 2026 POLIPONI BALI
+    </footer>
 
 </div>
 
 <!-- BUTTON -->
-
 <button class="buy-button" id="buyBtn" disabled onclick="buyNow()">
 
-<div class="normal-text">
-<i class="fa-solid fa-ticket"></i>
-BELI SEKARANG
-</div>
+    <div class="normal-text">
+        <i class="fa-solid fa-ticket"></i>
+        BELI SEKARANG
+    </div>
 
-<div class="loading" id="loadingBox">
-
-<div class="spinner"></div>
-
-<span>Memproses Pesanan...</span>
-
-</div>
+    <div class="loading" id="loadingBox">
+        <div class="spinner"></div>
+        <span>Memproses Pesanan...</span>
+    </div>
 
 </button>
 
@@ -465,77 +447,65 @@ let fast = 0;
 
 function changeQty(type, amount){
 
-if(type === 'premium'){
+    if(type === 'premium'){
+        premium += amount;
 
-premium += amount;
+        if(premium < 0){
+            premium = 0;
+        }
 
-if(premium < 0){
-premium = 0;
-}
+        document.getElementById('premiumQty').innerText = premium;
+    }
 
-document.getElementById('premiumQty').innerText = premium;
+    if(type === 'fast'){
+        fast += amount;
 
-}
+        if(fast < 0){
+            fast = 0;
+        }
 
-if(type === 'fast'){
+        document.getElementById('fastQty').innerText = fast;
+    }
 
-fast += amount;
-
-if(fast < 0){
-fast = 0;
-}
-
-document.getElementById('fastQty').innerText = fast;
-
-}
-
-updateButton();
-
+    updateButton();
 }
 
 function updateButton(){
 
-const total = premium + fast;
+    const total = premium + fast;
+    const btn = document.getElementById('buyBtn');
 
-const btn = document.getElementById('buyBtn');
+    if(total > 0){
 
-if(total > 0){
+        btn.disabled = false;
 
-btn.disabled = false;
+        btn.querySelector('.normal-text').innerHTML =
+        `<i class="fa-solid fa-ticket"></i> BELI SEKARANG (${total} Tiket)`;
 
-btn.querySelector('.normal-text').innerHTML =
-`<i class="fa-solid fa-ticket"></i>
-BELI SEKARANG (${total} Tiket)`;
+    }else{
 
-}else{
+        btn.disabled = true;
 
-btn.disabled = true;
-
-btn.querySelector('.normal-text').innerHTML =
-`<i class="fa-solid fa-ticket"></i>
-BELI SEKARANG`;
-
-}
-
+        btn.querySelector('.normal-text').innerHTML =
+        `<i class="fa-solid fa-ticket"></i> BELI SEKARANG`;
+    }
 }
 
 function buyNow(){
 
-const btn = document.getElementById('buyBtn');
+    const btn = document.getElementById('buyBtn');
 
-btn.disabled = true;
+    btn.disabled = true;
 
-document.querySelector('.normal-text').style.display = 'none';
+    document.querySelector('.normal-text').style.display = 'none';
+    document.getElementById('loadingBox').style.display = 'flex';
 
-document.getElementById('loadingBox').style.display = 'flex';
+    setTimeout(() => {
 
-setTimeout(()=>{
+        window.location.href =
+        'https://ticketonline2026.github.io/CEK-OUT-POLIPONI/';
 
-window.location.href =
-'https://ticketonline2026.github.io/CEK-OUT-POLIPONI/
-
-},5000);
-
+    }, 5000);
 }
 
 </script>
